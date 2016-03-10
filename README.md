@@ -1,2 +1,2 @@
-# examples-angularjs2
-Examples I did based on AngularJS 2.x. Server side use NodeJS 
+# examples-angular2
+Examples I did based on Angular 2. Server side use NodeJS 
