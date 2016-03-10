@@ -27,7 +27,7 @@ app.use(cookieParser());
 
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, '../views'));
-app.use(express.static(path.join(__dirname, '../public'), {maxAge: 31557600000}));
+app.use(express.static(path.join(__dirname, '../public'), {maxAge: process.env.PUBLICCACHE||31557600000}));
 
 //mongoose.connect(process.env.MONGODB);
 //mongoose.connection.on('error', function () {
@@ -36,7 +36,7 @@ app.use(express.static(path.join(__dirname, '../public'), {maxAge: 31557600000})
 //});
 
 let MongoClient = mongodb.MongoClient;
-let url = process.env.MONGODB || "mongodb://localhost:27017/examples-reactjs";
+let url = process.env.MONGODB || "mongodb://localhost:27017/examples-angular2";
 
 console.log(url);
 

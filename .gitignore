@@ -32,5 +32,13 @@ node_modules
 # Optional REPL history
 .node_repl_history
 
-# intelijj
+# intellij
 .idea
+
+# typescript
+typings
+
+# ignore compiled js and js.map
+public/official-tutorial/**/*.js
+public/official-tutorial/**/*.js.map
+

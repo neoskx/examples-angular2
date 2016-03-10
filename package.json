@@ -1,13 +1,20 @@
 {
-  "name": "examples-reactjs",
+  "name": "examples-angular2",
   "version": "0.1.0",
   "author": "Shaoke Xu",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shaoke/examples-reactjs.git"
+    "url": "https://github.com/shaoke/examples-angular2.git"
   },
   "scripts": {
-    "start": "babel-node index.js"
+    "start": "npm run publicnpm && npm run tsc && npm run startserver ",
+    "dev": "npm run publicnpm && concurrently \"npm run tsc:w\" \"npm run startserver\"",
+    "publicnpm": "cd public && npm install",
+    "startserver": "babel-node index.js",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings",
+    "postinstall": "typings install"
   },
   "dependencies": {
     "body-parser": "^1.13.3",
@@ -24,5 +31,8 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "concurrently": "^2.0.0",
+    "typescript": "^1.8.7",
+    "typings": "^0.7.5"
   }
 }
